@@ -27,6 +27,7 @@ namespace Game
 
         public void Print()
         {
+            
             string friend;
             if (l == true)
             {
