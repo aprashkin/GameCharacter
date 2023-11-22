@@ -63,7 +63,7 @@ namespace Game
         {
 
             kol = 0;
-            Console.WriteLine("Поганый ящер уничтожен.");
+            Console.WriteLine("Враг уничтожен Его душа перешла в ваше владение.");
         }
 
         public int getdu()
@@ -73,11 +73,28 @@ namespace Game
 
         public void Uron(int anigilate)
         {
-            kol = kol - anigilate;
             if (kol < 1)
             {
                 kol = 0;
                 Console.WriteLine("\n (o-_-o) Он уже мёртв... Тебе весело издеваться над трупом?\n");
+            }
+            
+            else
+            {
+                kol = kol - anigilate;    
+            }
+            
+            
+        }
+
+
+        public void onuluron()
+        {
+            int colVrag = kol;
+            if (colVrag <= 0)
+            {
+                Console.WriteLine("(o-_-o) Он уже мёртв... Тебе весело издеваться над трупом?");
+                uron = 0;
             }
         }
 
@@ -89,12 +106,12 @@ namespace Game
                 Console.WriteLine("Нельзя быть здоровее 100 хп, считай что остальное ушло на благотварительность.");
                 kol = 100;
             }
-            Console.WriteLine("Бахнув кротовухи вы апнули своё здоровье до " + kol);
+            Console.WriteLine("Бахнув зелья заморского вы апнули своё здоровье до " + kol);
         }
 
         public void Vost()
         {
-            Console.WriteLine("Бахнув байкальской водички вы отрегенились на 100. И ТЕПЕРЬ ГОТОВЫ СРАЖАТЬСЯ С ЯЩЕРАМИ ПРОКЛЯТЫМИ!");
+            Console.WriteLine("Бахнув байкальской водички вы отрегенились на 100.");
             kol = 100;
         }
 

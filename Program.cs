@@ -154,6 +154,14 @@ while (true)
         }
         Console.WriteLine("Введи номер игрока с которым хотим пообщаться: ");
         int anigilate = int.Parse(Console.ReadLine()) - 1;
+        int hpAnig = gaymer[anigilate].getxp();
+
+        if (hpAnig < 1)
+        {
+            Console.WriteLine("я мертвец! Таким останусь я навек(боя не будет)");
+            gaymer[anigilate].onuluron();
+           
+        }
 
         if (gaymer[hero].getl() == gaymer[anigilate].getl())
         {
